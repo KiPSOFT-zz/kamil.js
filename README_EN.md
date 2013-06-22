@@ -39,18 +39,18 @@ AddLine lines to be added with the Add method is used to generate the parameters
 name = Unique name to be used for each part.
 
 type = Ttype must have a value equal to the constant.
-       There Ttype = {
-             "Yes": 0,
+  	There Ttype = {
+	    "Yes": 0,
              "Func": 1,
              "If": 2,
              "For": 3,
              "Else": 4,
              "Cmd": 5
-       };
+	 };
 
 params = add the data into an area that can be processed. fonkisyonların functions of the parameters, the commands
-         constitutes the command parameters. There are definitions of the variable test = "bubirdeneme" statement that
-         "bubirdeneme" is equivalent to the constant.
+	 constitutes the command parameters. There are definitions of the variable test = "bubirdeneme" statement that
+	 "bubirdeneme" is equivalent to the constant.
 
 TBlock.Find (name, type)
 
@@ -76,9 +76,8 @@ kamil.js structure of a sample:
 
 
 
-
-        var kml = new kamil.TKamil();  
-  var blk = kml.Add("IndexYaz", kamil.TType.Func, "");	
+	var kml = new kamil.TKamil();  
+  	var blk = kml.Add("IndexYaz", kamil.TType.Func, "");	
 	blk.AddLine("satir1", blk.Add("console.log", kamil.TType.Cmd, ["index html oluşturuluyor."]));	
 	blk.AddLine("satir2", blk.Add("$", kamil.TType.Cmd, []), 
 		blk.Add("cheerio.load", kamil.TType.Cmd, ["<html></html>"]));	
