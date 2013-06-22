@@ -75,20 +75,23 @@ bloğun kod çıktısını döndürür.
 örnek bir kamil.js yapısı:
 
 
-  var kml = new kamil.TKamil();
-	var blk = kml.Add("IndexYaz", kamil.TType.Func, "");
-	blk.AddLine("satir1", blk.Add("console.log", kamil.TType.Cmd, ["index html oluşturuluyor."]));
-	blk.AddLine("satir2", blk.Add("$", kamil.TType.Cmd, []), blk.Add("cheerio.load", kamil.TType.Cmd, ["<html></html>"]));
-	blk.AddLine("satir3", blk.Add("$(\"html\").append", kamil.TType.Cmd, ["<head></head>"]));
-	console.log(kml.GetCode());
+        var kml = new kamil.TKamil();  
+	var blk = kml.Add("IndexYaz", kamil.TType.Func, "");	
+	blk.AddLine("satir1", blk.Add("console.log", kamil.TType.Cmd, ["index html oluşturuluyor."]));	
+	blk.AddLine("satir2", blk.Add("$", kamil.TType.Cmd, []), 
+		blk.Add("cheerio.load", kamil.TType.Cmd, ["<html></html>"]));	
+	blk.AddLine("satir3", blk.Add("$(\"html\").append", kamil.TType.Cmd, ["<head></head>"]));	
+	console.log(kml.GetCode());	
   
   bu kodun çıktısı şu şekilde olacaktır;
   
-  function IndexYaz() {
-    console.log("index.html oluşturuluyor.");
-    $ = cheerio.load("<html></html>");
-    $("html").append("<head></head>");
-  }
+  
+  	function IndexYaz() {
+    	  console.log("index.html oluşturuluyor.");
+    	  $ = cheerio.load("<html></html>");
+    	  $("html").append("<head></head>");
+  	}
+  
   
 .  
   
